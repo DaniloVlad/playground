@@ -7,5 +7,3 @@ int main() {
     int f = b + c;
     return 0;
 }
-
-main();

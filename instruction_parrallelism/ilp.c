@@ -5,8 +5,6 @@ int main() {
     int d = a + b;
     int f = b + c;
     int e = a + d;
-    
+
     return 0;
 }
-
-main();
