@@ -1,0 +1,29 @@
+
+bin/no_ilp:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <ltmp0>:
+       0: d10083ff     	sub	sp, sp, #32
+       4: 52800000     	mov	w0, #0
+       8: b9001fff     	str	wzr, [sp, #28]
+       c: 52800028     	mov	w8, #1
+      10: b9001be8     	str	w8, [sp, #24]
+      14: 52800048     	mov	w8, #2
+      18: b90017e8     	str	w8, [sp, #20]
+      1c: 52800068     	mov	w8, #3
+      20: b90013e8     	str	w8, [sp, #16]
+      24: b9401be8     	ldr	w8, [sp, #24]
+      28: b94017e9     	ldr	w9, [sp, #20]
+      2c: 0b090108     	add	w8, w8, w9
+      30: b9000fe8     	str	w8, [sp, #12]
+      34: b9401be8     	ldr	w8, [sp, #24]
+      38: b9400fe9     	ldr	w9, [sp, #12]
+      3c: 0b090108     	add	w8, w8, w9
+      40: b9000be8     	str	w8, [sp, #8]
+      44: b94017e8     	ldr	w8, [sp, #20]
+      48: b94013e9     	ldr	w9, [sp, #16]
+      4c: 0b090108     	add	w8, w8, w9
+      50: b90007e8     	str	w8, [sp, #4]
+      54: 910083ff     	add	sp, sp, #32
+      58: d65f03c0     	ret
