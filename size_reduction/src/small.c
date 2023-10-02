@@ -12,7 +12,8 @@ int atoi(char *str)
 
 int run()
 {
-  int i = atoi("10");
+  char *str = "10";
+  int i = atoi(str);
   return 0;
 }
 
