@@ -9,7 +9,7 @@ int atoi(char *str)
   return k;
 }
 
-int run()
+inline int run()
 {
   int i = atoi("10");
   return 0;
