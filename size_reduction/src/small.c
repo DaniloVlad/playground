@@ -1,4 +1,4 @@
-inline void run();
+inline int run(void);
 
 int atoi(char *str)
 {
@@ -11,7 +11,7 @@ int atoi(char *str)
   return k;
 }
 
-inline int run()
+inline int run(void)
 {
   int i = atoi("10");
   return 0;
