@@ -20,6 +20,7 @@ int run(void)
 void exit(int code) {
   syscall(SYS_exit, code);
 }
+
 void entry()
 {
   run();
