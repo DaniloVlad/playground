@@ -1,21 +1,21 @@
 CC = gcc
-CFLAGS =
-OBJ = obj
+CFLAGS = -Os
+# on macos use -dead_strip (or man ld and find out)
+CSMALLFLAGS = -Wl,--gc-sections -fdata-sections -ffunction-sections -eentry -nostartfiles -static
 BIN = bin
 SRC = src
 TESTS = tests
 
-SOURCES = $(wildcard $(SRC)/*.c)
-OBJECTS = $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
-BINARIES = $(patsubst $(SRC)/%.c, $(BIN)/%, $(SOURCES))
+base:
+	$(CC) $(SRC)/base.c -o $(bin)/base
 
-$(OBJ)/%.o: $(SRC)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+base_os:
+	$(CC) $(CFLAGS) $(SRC)/base.c -o $(bin)/base_os
 
-$(BIN)/%: $(SRC)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+small:
+	$(CC) $(CFLAGS) $(CSMALLFLAGS) $(SRC)/small.c -o $(bin)/small
 
-all: $(OBJECTS) $(BINARIES)
+all: base base_os small
 
 clean:
-	rm -rf $(OBJ)/* $(BIN)/*
+	rm -rf $(BIN)/*

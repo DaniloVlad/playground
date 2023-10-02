@@ -1,17 +1,22 @@
 int atoi(char *str)
 {
-  int res = 0;
-
-  return res;
+  int k = 0;
+  while (*str)
+  {
+    k = (k << 3) + (k << 1) + (*str) - '0';
+    str++;
+  }
+  return k;
 }
 
-inline int run()
+int run()
 {
-  char *str = "10\0";
-  int i = atoi(str);
+  int i = atoi("10");
   return 0;
 }
 
-void entry() {
+void entry()
+{
   run();
+  exit(0);
 }

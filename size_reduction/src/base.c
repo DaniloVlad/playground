@@ -1,7 +1,6 @@
-#include "headers/base.h"
+#include <stdlib.h>
 
 int main() {
   int i = atoi("123");
-  printf("%d\n", i);
   return 0;
 }
