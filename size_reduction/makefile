@@ -19,7 +19,7 @@ base_static:
 	$(CC) $(CFLAGS) $(CSTATICFLAGS) $(SRC)/base.c -o $(BIN)/base_static
 
 small:
-	$(CC) $(CFLAGS) $(CSMALLFLAGS) $(CSMALLENTRYFLAGS) $(SRC)/small.c -o $(BIN)/small
+	$(CC) $(CFLAGS) $(CSTATICFLAGS) $(CSMALLENTRYFLAGS) $(SRC)/small.c -o $(BIN)/small
 
 clean:
 	rm -rf $(BIN)/*
