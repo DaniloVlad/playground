@@ -3,5 +3,5 @@
 
 void entry(void);
 int atoi(char *);
-
+int run();
 #endif
