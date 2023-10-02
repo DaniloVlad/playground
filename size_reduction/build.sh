@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p run
 rm -rf ./run/*
 make clean
 make all
