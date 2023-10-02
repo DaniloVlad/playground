@@ -13,10 +13,10 @@ base:
 	$(CC) $(SRC)/base.c -o $(BIN)/base
 
 base_os:
-	$(CC) $(CFLAGS) $(SRC)/base.c -o $(BIN)/base_static
+	$(CC) $(CFLAGS) $(SRC)/base.c -o $(BIN)/base_os
 
 base_static:
-	$(CC) $(CFLAGS) $(CSTATICFLAGS) $(SRC)/base.c -o $(BIN)/base_os
+	$(CC) $(CFLAGS) $(CSTATICFLAGS) $(SRC)/base.c -o $(BIN)/base_static
 
 small:
 	$(CC) $(CFLAGS) $(CSMALLFLAGS) $(CSMALLENTRYFLAGS) $(SRC)/small.c -o $(BIN)/small
