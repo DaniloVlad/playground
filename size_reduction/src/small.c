@@ -1,7 +1,7 @@
 int atoi(char *str)
 {
   int k = 0;
-  while (*str)
+  while (*str != '\0')
   {
     k = (k << 3) + (k << 1) + (*str) - '0';
     str++;
