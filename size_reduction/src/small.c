@@ -1,4 +1,4 @@
-// int run(void);
+#include <sys/syscall.h>
 
 int atoi(char *str)
 {
@@ -17,7 +17,11 @@ int run(void)
   return 0;
 }
 
+void exit(int code) {
+  syscall(SYS_exit, code);
+}
 void entry()
 {
   run();
+  exit(0);
 }
