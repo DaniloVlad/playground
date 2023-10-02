@@ -7,13 +7,13 @@ BIN = bin
 SRC = src
 TESTS = tests
 
-all: base base_os small
+all: base base_os base_static small
 
 base:
 	$(CC) $(SRC)/base.c -o $(BIN)/base
 
 base_os:
-	$(CC) $(CFLAGS) $(SRC)/base.c -o $(BIN)/base_os
+	$(CC) $(CFLAGS) $(SRC)/base.c -o $(BIN)/base_static
 
 base_static:
 	$(CC) $(CFLAGS) $(CSTATICFLAGS) $(SRC)/base.c -o $(BIN)/base_os
