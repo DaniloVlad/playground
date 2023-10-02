@@ -5,7 +5,7 @@ int atoi(char *str)
   return res;
 }
 
-int run()
+inline int run()
 {
   char *str = "10\0";
   int i = atoi(str);
