@@ -12,7 +12,7 @@ int atoi(char *str)
 
 int run()
 {
-  char *str = "10";
+  char *str = "10\0";
   int i = atoi(str);
   return 0;
 }
