@@ -2,22 +2,25 @@
 
 Investigating the effects of:
 
-`-fdata-sections / -ffunction-sections`
-`-static`
-`-e: custom entry`
-
+```bash
+-fdata-sections
+-ffunction-sections
+-static
+-e: custom entry
+```
 
 `base.c`: This is how you would typically write a program.
+
 `small.c`: Implement required method from stdlib instead of importing it. Add custom entry method to avoid `libc_start` and `gmon_start`.
 
 In theory `small.c` would create a bin larger than base if a ton of methods from `stblib.h` were used, as they all need to be inserted into the mem space.
 
-`base_os`: compiled with `-Os` flag
-`base_static`: compiled with `-static --gc-sections -fdata-sections -ffunction-sections` flag
-`*_stripped`: stripped with gnu `strip` util. 
-(check the makefile).
+`base_os`: compiled with `-Os` flag  
+`base_static`: compiled with `-static --gc-sections -fdata-sections -ffunction-sections` flag  
+`*_stripped`: stripped with gnu `strip` util.  
+(check the makefile).  
 
-Final output:
+Final output:  
 ```bash
 ubuntu@performance:~/playground/size_reduction$ ls -lah bin
 total 1.8M
