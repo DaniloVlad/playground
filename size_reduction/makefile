@@ -7,13 +7,13 @@ SRC = src
 TESTS = tests
 
 base:
-	$(CC) $(SRC)/base.c -o $(bin)/base
+	$(CC) $(SRC)/base.c -o $(BIN)/base
 
 base_os:
-	$(CC) $(CFLAGS) $(SRC)/base.c -o $(bin)/base_os
+	$(CC) $(CFLAGS) $(SRC)/base.c -o $(BIN)/base_os
 
 small:
-	$(CC) $(CFLAGS) $(CSMALLFLAGS) $(SRC)/small.c -o $(bin)/small
+	$(CC) $(CFLAGS) $(CSMALLFLAGS) $(SRC)/small.c -o $(BIN)/small
 
 all: base base_os small
 
