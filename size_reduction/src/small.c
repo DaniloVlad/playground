@@ -1,5 +1,3 @@
-#include "headers/small.h"
-
 int atoi(char *str)
 {
   int res = 0;
