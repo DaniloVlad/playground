@@ -18,5 +18,4 @@ int run()
 void entry()
 {
   run();
-  exit(10);
 }
