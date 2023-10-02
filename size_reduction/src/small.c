@@ -1,3 +1,5 @@
+inline void run();
+
 int atoi(char *str)
 {
   int k = 0;
