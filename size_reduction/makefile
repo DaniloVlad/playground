@@ -6,6 +6,8 @@ BIN = bin
 SRC = src
 TESTS = tests
 
+all: base base_os small
+
 base:
 	$(CC) $(SRC)/base.c -o $(BIN)/base
 
@@ -14,8 +16,6 @@ base_os:
 
 small:
 	$(CC) $(CFLAGS) $(CSMALLFLAGS) $(SRC)/small.c -o $(BIN)/small
-
-all: base base_os small
 
 clean:
 	rm -rf $(BIN)/*
