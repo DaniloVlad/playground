@@ -189,4 +189,6 @@ int main(int argc, char *argv) {
   for (int i = 1; i < argc; i ++) {
     nums[i] = atoi(argv[i]);
   }
+
+  execute_funcs(argc - 1, nums);
 }
