@@ -1,7 +1,7 @@
+#ifndef UTIL_H
+#define UTIL_H
 #include <stdio.h>
 #include <string.h>
-#include <sys/mman.h>
-#include <stdlib.h>
 
 int hex_dump(char *description, void *ptr, int len)
 {
@@ -16,7 +16,7 @@ int hex_dump(char *description, void *ptr, int len)
   }
 
   unsigned char buff[17];
-  unsigned char *str = ptr;
+  unsigned char *str = (unsigned char *) ptr;
   int i = 0;
   for (i = 0; i < len; i++) {
     if (i % 16 == 0) {
@@ -44,18 +44,4 @@ int hex_dump(char *description, void *ptr, int len)
   return 0;
 }
 
-
-int main()
-{
-  FILE *fp = popen("/bin/cp /bin/echo ./echo; /bin/cat ./bin/sum > ./echo; ./echo 1 2 3      > result;", "r");
-  if (fp == NULL) {
-    printf("ERROR running popen");
-    return -1;
-  }
-  char ch;
-  while( (ch=fgetc(fp)) != EOF)
-        putchar(ch);
-  pclose(fp);
-  // printf("sum: %d\n", func(4, 1, 2, 3, 4));
-  return 0;
-}
+#endif

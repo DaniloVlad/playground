@@ -89,7 +89,6 @@ static void *lookup_function(const char *name)
 
 static void execute_funcs(int count, int* values)
 {
-  /* pointers to imported add5 and add10 functions */
   int (*sum)(int num_args, int *args);
 
   sumFunc = lookup_function("sum");
